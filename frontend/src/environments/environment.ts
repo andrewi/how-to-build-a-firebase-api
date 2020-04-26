@@ -4,11 +4,11 @@
 
 export const environment = {
   production: false,
-  create: 'https://us-central1-fir-api-9a206.cloudfunctions.net/app/api/create',
-  readId: 'https://us-central1-fir-api-9a206.cloudfunctions.net/app/api/read/',
-  readAll: 'https://us-central1-fir-api-9a206.cloudfunctions.net/app/api/read',
-  update: 'https://us-central1-fir-api-9a206.cloudfunctions.net/app/api/update/',
-  delete: 'https://us-central1-fir-api-9a206.cloudfunctions.net/app/api/delete/'
+  create: 'https://us-central1-fir-api-fe648.cloudfunctions.net/app/api/create',
+  readId: 'https://us-central1-fir-api-fe648.cloudfunctions.net/app/api/read/',
+  readAll: 'https://us-central1-fir-api-fe648.cloudfunctions.net/app/api/read',
+  update: 'https://us-central1-fir-api-fe648.cloudfunctions.net/app/api/update/',
+  delete: 'https://us-central1-fir-api-fe648.cloudfunctions.net/app/api/delete/'
 };
 
 /*

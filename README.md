@@ -19,7 +19,7 @@ The `postman` folder holds a postman collection that has example calls that you 
 
 There is a set of npm scripts that help with running this project:
 - `start-frontend` runs the Angular frontend application locally on `localhost:4200`
-- `api-serve` runs the API locally on `port 5000`
+- `api-serve` runs the API locally on `port 5001`
 - `api-deploy` deploys the API into Firebase
 - `firebase-install` installs the Firebase CLI
 - `firebase-init` initializes a firebase project
