@@ -24,5 +24,4 @@ jobs:
                   command: npm build
             - run:
                   name: Firebase Deploy
-                  command: ./node_modules/.bin/firebase deploy --token "$FIREBASE_TOKEN" --only hosting
-view rawconfig.yml hosted with ❤ by GitHub
+                  command: ./node_modules/.bin/firebase deploy --token "$FIREBASE_TOKEN" --only functions
