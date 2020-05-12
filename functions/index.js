@@ -14,6 +14,7 @@ const db = admin.firestore();
 
 // test hello-world
 app.get('/hello-world', (req, res) => {
+	console.log("Hello World Called with: ", req.method, req.query)
   return res.status(200).send('Hello World!');
 });
 
