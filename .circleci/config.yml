@@ -15,7 +15,7 @@ jobs:
                 command: cp build_scripts/deploy_config.sh deploy_config.sh
             - run:
                 name: load in environment variables
-                command: ./deploy_config.sh                           
+                command:  chmod +rwx deploy_config.sh; ./deploy_config.sh                           
             # Download and cache dependencies
             # - restore_cache:
             #       keys:
