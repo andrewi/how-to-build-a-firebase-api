@@ -14,14 +14,20 @@ jobs:
                       - v1-dependencies-
             - run:
                   name: Install Dependencies
-                  command: npm install
-            - save_cache:
-                  key: v1-npm-deps-{{ checksum "package-lock.json" }}
-                  paths:
-                      - ./functions/node_modules
+                  command: pwd; npm install
+            # - save_cache:
+            #       key: v1-npm-deps-{{ checksum "package-lock.json" }}
+            #       paths:
+            #           - ./functions/node_modules
+            - run:
+                  name: Install Firebase
+                  command: npm install --save-dev firebase-tools
+            - run:
+                  name: Functions Install
+                  command: npm run functions-install
             - run:
                   name: Build
                   command: npm build
             - run:
                   name: Firebase Deploy
-                  command: ./functions/node_modules/.bin/firebase deploy --token "$FIREBASE_TOKEN" --only functions
+                  command: firebase deploy --token "$FIREBASE_TOKEN" --only functions
