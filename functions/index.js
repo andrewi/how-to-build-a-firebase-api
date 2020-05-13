@@ -5,7 +5,8 @@ const cors = require('cors');
 const app = express();
 app.use(cors({ origin: true }));
 
-var serviceAccount = require("./permissions.json");
+// var serviceAccount = require("./permissions.json"); // Local build
+var serviceAccount = require("./permissions_build.json"); // Circle CI build; private variables
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
   databaseURL: "https://fir-api-fe648.firebaseio.com"
