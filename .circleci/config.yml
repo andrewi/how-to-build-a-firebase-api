@@ -21,13 +21,13 @@ jobs:
             #           - ./functions/node_modules
             - run:
                   name: Install Firebase
-                  command: pwd; npm install --save-dev firebase-tools
+                  command: cd functions; pwd; npm install --save-dev firebase-tools
             # - run:
             #       name: Functions Install
             #       command: npm run functions-install
             - run:
                   name: Build
-                  command: pwd; npm build
+                  command: cd functions; pwd; npm build
             - run:
                   name: Firebase Deploy
-                  command: cd ..; pwd; ./functions/node_modules/.bin/firebase deploy --token "$FIREBASE_TOKEN" --only functions
+                  command: pwd; ./functions/node_modules/.bin/firebase deploy --token "$FIREBASE_TOKEN" --only functions
