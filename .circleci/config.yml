@@ -10,12 +10,12 @@ jobs:
             - run:
                 name: Show current branch
                 command: echo ${CIRCLE_BRANCH}
-            - run:
-                name: copy deploy config script to root directory
-                command: cp build_scripts/deploy_config.sh deploy_config.sh
-            - run:
-                name: load in environment variables
-                command:  chmod +rwx deploy_config.sh; ./deploy_config.sh                           
+            # - run:
+            #     name: copy deploy config script to root directory
+            #     command: cp build_scripts/deploy_config.sh deploy_config.sh
+            # - run:
+            #     name: load in environment variables
+            #     command:  chmod +rwx deploy_config.sh; ./deploy_config.sh                           
             # Download and cache dependencies
             # - restore_cache:
             #       keys:

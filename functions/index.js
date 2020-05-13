@@ -5,10 +5,10 @@ const cors = require('cors');
 const app = express();
 app.use(cors({ origin: true }));
 
-// var serviceAccount = require("./permissions.json"); // Local build
-var serviceAccount = require("./permissions_build.json"); // Circle CI build; private variables
+var serviceAccount = require("./permissions.json"); // Local build
+// var serviceAccount = require("./permissions_build.json"); // Circle CI build; private variables
 admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount),
+  credential: admin.credential.applicationDefault(), // .cert(serviceAccount),
   databaseURL: "https://fir-api-fe648.firebaseio.com"
 });
 const db = admin.firestore();
