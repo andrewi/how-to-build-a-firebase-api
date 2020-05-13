@@ -22,9 +22,9 @@ jobs:
             - run:
                   name: Install Firebase
                   command: npm install --save-dev firebase-tools
-            - run:
-                  name: Functions Install
-                  command: npm run functions-install
+            # - run:
+            #       name: Functions Install
+            #       command: npm run functions-install
             - run:
                   name: Build
                   command: npm build
